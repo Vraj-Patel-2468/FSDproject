@@ -19,4 +19,6 @@ public class UserPref {
     private User user;
 
 //    TODO: Save user settings here.
+    private String phone;
+    private String profilePic;
 }

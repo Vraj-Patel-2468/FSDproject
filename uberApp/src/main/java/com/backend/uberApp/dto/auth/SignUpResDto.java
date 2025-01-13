@@ -1,10 +1,13 @@
 package com.backend.uberApp.dto.auth;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class SignUpResDto {
     private long Id;
     private String email;
+    private String[] roles;
     private String msg;
 }

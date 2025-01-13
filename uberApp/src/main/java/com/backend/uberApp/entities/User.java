@@ -10,7 +10,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.time.LocalDateTime;
 import java.util.Collection;
-import java.util.List;
 import java.util.Set;
 
 @AllArgsConstructor
@@ -24,7 +23,6 @@ public class User implements UserDetails {
     private Long id;
 
     private String username;
-    private String phone;
     private String password;
 
     @Column(unique = true)
@@ -36,8 +34,6 @@ public class User implements UserDetails {
     @ElementCollection(fetch = FetchType.LAZY)
     @Enumerated(EnumType.STRING)
     private Set<String> roles;
-
-    String profilePic;
 
     LocalDateTime createdAt;
     LocalDateTime updatedAt;

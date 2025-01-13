@@ -3,9 +3,7 @@ package com.backend.uberApp.dto.auth;
 import lombok.Data;
 
 @Data
-public class SignUpReqDto {
-    private String username;
+public class LoginReqDto {
     private String email;
     private String password;
-    private String[] roles;
 }
