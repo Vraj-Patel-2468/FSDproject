@@ -40,11 +40,12 @@ public class User implements UserDetails {
 
     @PostPersist
     public void postPersist() {
-        createdAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
+        this.createdAt = LocalDateTime.now();
     }
     @PostUpdate
     public void postUpdate() {
-        updatedAt = LocalDateTime.now();
+        this.updatedAt = LocalDateTime.now();
     }
 
     //Web security related methods

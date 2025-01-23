@@ -55,4 +55,12 @@ public class UserService implements UserDetailsService {
                 .orElseThrow(() -> new RuntimeException("User not found"));
     }
 
+    public User getUserByEmail(String email) {
+        return userRepository.findByEmail(email)
+                .orElse(null);
+    }
+
+    public User saveUser(User newUser) {
+        return userRepository.save(newUser);
+    }
 }
