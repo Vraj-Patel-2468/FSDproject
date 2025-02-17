@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Counter from "./components/Counter";
 import { ThemeContext } from "./contexts/ThemeContext";
 import { Button } from '@mantine/core';
-
+import Landing_page from './pages/landing_page'
 
 export default function App() {
   
@@ -10,8 +10,7 @@ export default function App() {
 
   return (
     <>
-      <h1>{theme}</h1>
-      <Button onClick={() => setTheme(prev => prev=="light"?"dark": "light")}>Change Theme</Button>
+    <Landing_page/>
     </>
   )
 }
