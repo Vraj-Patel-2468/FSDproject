@@ -1,16 +1,15 @@
 import { useContext } from "react";
-import Counter from "./components/Counter";
-import { ThemeContext } from "./contexts/ThemeContext";
-import { Button } from '@mantine/core';
-import Landing_page from './pages/landing_page'
+import Landing_page from "./pages/Landing_Page.jsx";
+import { UserContext } from "./contexts/ThemeContext.jsx";
+import DashBoard from "./pages/DashBoard.jsx";
 
-export default function App() {
+export default function App() {  
   
-  const { theme, setTheme } = useContext(ThemeContext)
+  const { isLoggedIn } = useContext(UserContext);
 
   return (
     <>
-    <Landing_page/>
+      {isLoggedIn ? <DashBoard /> : <Landing_page/>}
     </>
   )
 }

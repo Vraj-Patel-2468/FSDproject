@@ -16,7 +16,7 @@ import java.util.Date;
 
 @Service
 @RequiredArgsConstructor
-public class JwtService {
+public className JwtService {
 
     @Value("${jwt.secretKey}")
     private String jwtSecretKey;

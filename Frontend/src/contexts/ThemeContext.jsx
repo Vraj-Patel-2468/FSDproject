@@ -1,13 +1,13 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
-export const ThemeContext = createContext(null)
+export const UserContext = createContext(null)
 
-export const ThemeContextProvider = (prop)=>{
-    const [theme,setTheme] = useState('light')
+export const UserContextProvider = (prop)=>{
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
 
     return (
-        <ThemeContext.Provider value={{theme, setTheme }}>
+        <UserContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
             {prop.children}
-        </ThemeContext.Provider>
+        </UserContext.Provider>
     )
 }

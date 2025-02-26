@@ -3,7 +3,7 @@ import './index.css'
 import App from './App.jsx'
 import { Provider } from 'react-redux'
 import store from './redux/store.js'
-import { ThemeContextProvider } from './contexts/ThemeContext.jsx';
+import { UserContextProvider } from './contexts/ThemeContext.jsx';
 import '@mantine/core/styles.css';
 import { MantineProvider } from '@mantine/core';
 
@@ -11,9 +11,9 @@ import { MantineProvider } from '@mantine/core';
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <MantineProvider>
-      <ThemeContextProvider>
+      <UserContextProvider>
         <App />
-      </ThemeContextProvider>
+      </UserContextProvider>
     </MantineProvider>
   </Provider>
 )

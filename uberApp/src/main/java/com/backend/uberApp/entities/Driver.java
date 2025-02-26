@@ -12,7 +12,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Driver {
+public className Driver {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

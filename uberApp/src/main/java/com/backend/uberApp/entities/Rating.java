@@ -10,7 +10,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 @Entity
-public class Rating {
+public className Rating {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;

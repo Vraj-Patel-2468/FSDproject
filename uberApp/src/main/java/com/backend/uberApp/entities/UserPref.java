@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Data
 @Entity
-public class UserPref {
+public className UserPref {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

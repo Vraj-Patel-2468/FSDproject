@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @Data
 @Entity
-public class Ride {
+public className Ride {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

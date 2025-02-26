@@ -18,7 +18,7 @@ import java.util.stream.Stream;
 
 @Service
 @RequiredArgsConstructor
-public class UserService implements UserDetailsService {
+public className UserService implements UserDetailsService {
 
     private final UserRepository userRepository;
     private final PasswordEncoder passwordEncoder;
