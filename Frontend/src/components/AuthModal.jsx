@@ -3,8 +3,16 @@ import GoogleIcon from "../assets/search.png";
 
 export default function AuthModal({ isOpen, onClose, initialMode = "signin" }) {
   const [isSignUp, setIsSignUp] = useState(initialMode === "signup");
+  const [roles, setRoles] = useState({ driver: false, passenger: false });
 
   const toggleSignUp = () => setIsSignUp(!isSignUp);
+
+  const handleCheckboxChange = (role) => {
+    setRoles((prevRoles) => ({
+      ...prevRoles,
+      [role]: !prevRoles[role],
+    }));
+  };
 
   if (!isOpen) return null;
 
@@ -23,11 +31,13 @@ export default function AuthModal({ isOpen, onClose, initialMode = "signin" }) {
 
         <div className="p-6">
           {isSignUp && (
-            <input
-              type="text"
-              placeholder="Username"
-              className="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
-            />
+            <>
+              <input
+                type="text"
+                placeholder="Username"
+                className="w-full mb-3 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+              />
+            </>
           )}
           <input
             type="email"
@@ -39,7 +49,30 @@ export default function AuthModal({ isOpen, onClose, initialMode = "signin" }) {
             placeholder="Password"
             className="w-full mb-4 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
-          
+          {isSignUp && (
+            <>
+              <div className="flex items-center space-x-4 mb-4">
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={roles.driver}
+                    onChange={() => handleCheckboxChange("driver")}
+                    className="mr-2"
+                  />
+                  Driver
+                </label>
+                <label className="flex items-center">
+                  <input
+                    type="checkbox"
+                    checked={roles.passenger}
+                    onChange={() => handleCheckboxChange("passenger")}
+                    className="mr-2"
+                  />
+                  Passenger
+                </label>
+              </div>
+            </>
+          )}
           <button className="w-full mb-4 bg-black hover:bg-gray-800 text-white px-4 py-2.5 rounded-lg font-semibold transition">
             {isSignUp ? "Create Account" : "Login with Email"}
           </button>
