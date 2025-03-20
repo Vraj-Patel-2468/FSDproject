@@ -22,7 +22,7 @@ import java.util.Arrays;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping(path = "/auth")
-public className AuthController {
+public class AuthController {
 
     private final UserService userServices;
     private final AuthService authService;
@@ -58,3 +58,4 @@ public className AuthController {
     }
 
 }
+

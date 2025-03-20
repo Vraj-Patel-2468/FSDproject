@@ -28,6 +28,7 @@
     "@tabler/icons-react": "^3.30.0",
     "@tailwindcss/postcss": "^4.0.6",
     "@tailwindcss/vite": "^4.0.6",
+    "@vis.gl/react-google-maps": "^1.5.2",
     "axios": "^1.7.9",
     "date-fns": "^4.1.0",
     "dayjs": "^1.11.13",

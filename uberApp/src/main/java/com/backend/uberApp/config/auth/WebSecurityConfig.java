@@ -17,7 +17,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @RequiredArgsConstructor
-public className WebSecurityConfig {
+public class WebSecurityConfig {
 
     private final String[] PUBLIC_PATHS = {"/auth/**"};
     private final Oauth2SuccessHandler oauth2SuccessHandler;
@@ -32,7 +32,7 @@ public className WebSecurityConfig {
                         .requestMatchers(PUBLIC_PATHS).permitAll()
                         .anyRequest().authenticated()
                 )
-                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.className)
+                .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class)
                 .oauth2Login(oauth2Config -> oauth2Config
                         .failureUrl("/login?error=true")
                         .successHandler(oauth2SuccessHandler)

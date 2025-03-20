@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public className SignUpResDto {
+public class SignUpResDto {
     private long Id;
     private String email;
     private String[] roles;

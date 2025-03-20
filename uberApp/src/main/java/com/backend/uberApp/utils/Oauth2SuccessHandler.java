@@ -20,7 +20,7 @@ import java.util.Set;
 
 @Component
 @RequiredArgsConstructor
-public className Oauth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
+public class Oauth2SuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     private final UserService userService;
     private final JwtService jwtService;
 

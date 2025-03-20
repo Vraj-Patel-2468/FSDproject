@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../assets/Icon.png";
-import AuthModal from "./AuthModal"; // Make sure to adjust the import path as needed
-
+import AuthModal from "./AuthModal"; 
+ 
 export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="bg-black border-b border-gray-800 shadow-lg">
+      <nav className="bg-black border-b border-gray-800 shadow-lg fixed top-0 w-full z-100">
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-7xl px-6 py-4">
           <a href="http://localhost:5173/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src={Logo} className="h-12" alt="Rebu Logo" />
